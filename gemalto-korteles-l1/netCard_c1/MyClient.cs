@@ -15,18 +15,9 @@ namespace MyCompany.MyClientApp
     public class MyClient
     {
         private const string URL = "apdu://selfdiscover/SMS.uri";
-        private const bool UseProxy = true;
 
         public static void Main()
         {
-            if (UseProxy)
-            {
-                ContactManagerProxy managerProxyTest = new ContactManagerProxy(new ContactManagerService2());
-                Controller controllerTest = new Controller(managerProxyTest);
-                controllerTest.Run();
-                return;
-            }
-
             APDUClientChannel channel = new APDUClientChannel();
             ChannelServices.RegisterChannel(channel, false);
 
@@ -39,4 +30,3 @@ namespace MyCompany.MyClientApp
         }
     }
 }
-

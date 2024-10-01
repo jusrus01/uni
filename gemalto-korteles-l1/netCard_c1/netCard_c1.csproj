@@ -136,10 +136,8 @@
     <Compile Include="MyClient.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Proxies\ContactManagerProxy.cs" />
-    <Compile Include="Proxies\Copy\ContactManagerService2.cs" />
-    <Compile Include="Proxies\Copy\PubStorage2.cs" />
     <Compile Include="Handlers\RemoveContactHandler.cs" />
+    <Compile Include="Proxies\ContactManagerProxy.cs" />
     <Content Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
