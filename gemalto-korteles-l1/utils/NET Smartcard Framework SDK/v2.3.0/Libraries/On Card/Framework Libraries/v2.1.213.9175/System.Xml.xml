@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Xml</name>
+    </assembly>
+    <members>
+        <member name="T:System.Xml.ReadState">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.ReadState.Closed">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.ReadState.EndOfFile">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.ReadState.Error">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.ReadState.Initial">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.ReadState.Interactive">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.WhitespaceHandling">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.WhitespaceHandling.All">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.WhitespaceHandling.None">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.WhitespaceHandling.Significant">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.XmlException">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlException.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlException.#ctor(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlException.#ctor(System.String,System.Exception)">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.XmlNodeType">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Attribute">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.CDATA">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Comment">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Document">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.DocumentFragment">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.DocumentType">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Element">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.EndElement">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.EndEntity">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Entity">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.EntityReference">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.None">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Notation">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.ProcessingInstruction">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.SignificantWhitespace">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Text">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.Whitespace">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlNodeType.XmlDeclaration">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.XmlReader">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.Close">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.GetAttribute(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.GetAttribute(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.LookupNamespace(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.IsStartElement">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToContent">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.IsStartElement(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.IsStartElement(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToAttribute(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToAttribute(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToElement">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.Read">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToFirstAttribute">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.MoveToNextAttribute">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadAttributeValue">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadElementString(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadString">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadElementString(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadElementString">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadEndElement">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadStartElement(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadStartElement(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadStartElement">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.Skip">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadInnerXml">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlReader.ReadOuterXml">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.LocalName">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.IsDefault">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Item(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.HasValue">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Prefix">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.canResolveEntity">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.HasAttributes">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Value">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.AttributeCount">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.NamespaceURI">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Depth">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.ReadState">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Name">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.QuoteChar">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.NodeType">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.Item(System.String)">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.IsEmptyElement">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlReader.EOF">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.XmlSpace">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlSpace.Default">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlSpace.None">
+            <summary></summary>
+        </member>
+        <member name="F:System.Xml.XmlSpace.Preserve">
+            <summary></summary>
+        </member>
+        <member name="T:System.Xml.XmlTextReader">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.#ctor(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.#ctor(System.IO.Stream)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.#ctor(System.IO.TextReader)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ResetState">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.Close">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.GetAttribute(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.GetAttribute(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.MoveToAttribute(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.MoveToAttribute(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.MoveToElement">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.MoveToFirstAttribute">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.MoveToNextAttribute">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadAttributeValue">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.Read">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadString">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadChars(System.Char[],System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadBase64(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadBinHex(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.LookupNamespace(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadInnerXml">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.ReadOuterXml">
+            <summary></summary>
+        </member>
+        <member name="M:System.Xml.XmlTextReader.IsCurrentNode(System.String)">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.LocalName">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.IsDefault">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Item(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.HasValue">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Prefix">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Value">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.ReadState">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.NamespaceURI">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Depth">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Item(System.String)">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Name">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.QuoteChar">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.NodeType">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.Namespaces">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.WhitespaceHandling">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.AttributeCount">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.IsEmptyElement">
+            <summary></summary>
+        </member>
+        <member name="P:System.Xml.XmlTextReader.EOF">
+            <summary></summary>
+        </member>
+    </members>
+</doc>
+<!--+- OmniWorks Replacement History - scnet2`library`PublicRelease`FrameworkLibraries:System.Xml.xml;9 -->
+<!--       9*[589178] 10-DEC-2007 18:20:18 (GMT) ksachdeva -->
+<!--         "Updated for the mask release 2.1.213.9175" -->
+<!--       8*[588923] 20-NOV-2007 00:46:11 (GMT) ksachdeva -->
+<!--         "Updated for the mask release 2.1.208.8923" -->
+<!--       7*[588696] 03-OCT-2007 19:50:31 (GMT) sprevost -->
+<!--         "Regenerated." -->
+<!--       6*[578634] 31-OCT-2006 19:11:03 (GMT) ksachdeva -->
+<!--         "Updated for the mask release 2.0.57.8631" -->
+<!--       5*[576729] 21-AUG-2006 21:54:43 (GMT) sprevost -->
+<!--         "Updated for the mask release 2.0.27.6730." -->
+<!--       4*[576683] 21-AUG-2006 01:49:31 (GMT) sprevost -->
+<!--         "Updated for the mask release 2.0.22.6687" -->
+<!--       3*[576554] 15-AUG-2006 21:09:20 (GMT) sprevost -->
+<!--         "Updated for the testmask release 2.1.6551.9." -->
+<!--       2*[576525] 15-AUG-2006 00:42:02 (GMT) sprevost -->
+<!--         "Regenerated." -->
+<!--       1*[576429] 13-AUG-2006 18:04:29 (GMT) ksachdeva -->
+<!--         "Initial:" -->
+<!--+- OmniWorks Replacement History - scnet2`library`PublicRelease`FrameworkLibraries:System.Xml.xml;9 -->

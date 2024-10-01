@@ -1,0 +1,989 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartCard</name>
+    </assembly>
+    <members>
+        <member name="T:SmartCard.AccessManager">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.AccessManager.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.AccessManager.ResourceAccessPolicyCheck(System.String,SmartCard.AccessType)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.AccessManager.LifecycleStateChangePolicyCheck(System.String,System.String,SmartCard.LifecycleStateChange)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.AccessManager.InternalRequestorCodeBase">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.AccessManager.IsInternalRequest">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.AccessManager.ActiveAccessManager">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.AccessManager.InternalRequestorUri">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.AccessType">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.LoadAssemblyFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.LoadFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.DeleteFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.ReadFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.GetFileProperties">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.ManageFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.LockFile">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.CreateDirectory">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.DeleteDirectory">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.EnumerateDirectoryContent">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.ManageDirectory">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.ExecuteAssembly">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.SetChipSpeed">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.SetCommunicationSpeed">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.SetATRHistoricalBytes">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.AccessType.SetFIPSExecutionMode">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.#ctor(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.#ctor(System.Runtime.Remoting.Channels.IServerChannelSinkProvider)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.#ctor(System.Runtime.Remoting.Channels.IServerChannelSinkProvider,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.Parse(System.String,System.String@)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.StartListening(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.StopListening(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.GetUrlsForUri(System.String)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.ChannelName">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.ChannelPriority">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerChannel.ChannelData">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.#ctor(System.Runtime.Remoting.Channels.IServerChannelSink)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.GetResponseStream(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.ProcessMessage(System.Runtime.Remoting.Channels.IServerChannelSinkStack,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream,System.Runtime.Remoting.Messaging.IMessage@,System.Runtime.Remoting.Channels.ITransportHeaders@,System.IO.Stream@)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.AsyncProcessResponse(System.Runtime.Remoting.Channels.IServerResponseChannelSinkStack,System.Object,System.Runtime.Remoting.Messaging.IMessage,System.Runtime.Remoting.Channels.ITransportHeaders,System.IO.Stream)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.NextChannelSink">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSink.Properties">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSinkProvider">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSinkProvider.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSinkProvider.CreateSink(System.Runtime.Remoting.Channels.IChannelReceiver)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSinkProvider.GetChannelData(System.Runtime.Remoting.Channels.IChannelDataStore)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.Remoting.Channels.APDU.APDUServerFormatterSinkProvider.Next">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.Config">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.Config.#ctor">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.InteropServices.ISO7816.Config.ATRHistoricalBytes">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.InteropServices.ISO7816.Config.IsColdReset">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.Runtime.InteropServices.ISO7816.Config.CommunicationSpeed">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.ConsumptionManager">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ConsumptionManager.#ctor">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ConsumptionManager.ChipSpeed">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.ContentManager">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.OpenFile(System.String,System.IO.FileMode,System.IO.FileAccess)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.AppendToFile(System.IO.MemoryStream)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.ReadFromFile">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.CloseFile">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoadFile(System.String,System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderWrite(System.IO.MemoryStream)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.AddPrivateFileEvidence(System.String,SmartCard.FileEvidence)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.RemovePrivateFileEvidence(System.String,System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.SetPrivateFileEvidencePermissions(System.String,SmartCard.FileEvidence)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.AddPrivateDirectoryEvidence(System.String,SmartCard.DirectoryEvidence)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.RemovePrivateDirectoryEvidence(System.String,System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.SetPrivateDirectoryEvidencePermissions(System.String,SmartCard.DirectoryEvidence)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.SetFIPSExecutionMode(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetLogicalDrives">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetDirectories(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetFiles(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.CreateDirectory(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetServices(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetAppDomainSize(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetServiceStatus(System.String,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LifecycleChange(System.String,System.String,SmartCard.LifecycleStateChange)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetFile(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderOpen(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderWrite(System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderClose(System.IO.MemoryStream)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderClose(System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LoaderCancel">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetAssemblyHash(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetAssemblyPublicKeyToken(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetVersionInformation(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetPrivateFileEvidences(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetPublicFileEvidencePermissions(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.SetPublicFileEvidencePermissions(System.String,SmartCard.FilePermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.LockFile(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetPrivateDirectoryEvidences(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetPublicDirectoryEvidencePermissions(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.SetPublicDirectoryEvidencePermissions(System.String,SmartCard.DirectoryPermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetFileAttributes(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetFileSize(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.Delete(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetAssociatedPort(System.Int32,System.Int16,System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.GetMappingPersistentMemory">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.ExecuteAssembly(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.ContentManager.ExecuteAssembly(System.String,System.String[])">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.OSVersion">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.ATRHistoricalBytes">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.FreePersistentMemory">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.CLRVersion">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.CommunicationSpeed">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.SerialNumber">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.ActiveAccessManagerInfo">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.ContentManager.ChipSpeed">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.DirectoryEvidence">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryEvidence.PublicKeyToken">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryEvidence.Permissions">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.#ctor(System.Byte[],SmartCard.DirectoryPermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.SetPublicEvidencePermissions(System.String,SmartCard.DirectoryPermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.RemoveFrom(System.String,System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.AddTo(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.GetPrivateEvidences(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.GetPublicEvidencePermissions(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.DirectoryEvidence.RemoveFrom(System.String)">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.DirectoryPermission">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.None">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.Add">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.Delete">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.Manage">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.Enumerate">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.DirectoryPermission.All">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.FileEvidence">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FileEvidence.PublicKeyToken">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FileEvidence.Permissions">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.#ctor(System.Byte[],SmartCard.FilePermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.SetPublicEvidencePermissions(System.String,SmartCard.FilePermission)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.RemoveFrom(System.String,System.Byte[])">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.Lock(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.AddTo(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.GetPrivateEvidences(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.GetPublicEvidencePermissions(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.FileEvidence.RemoveFrom(System.String)">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.FilePermission">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.None">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.Read">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.Write">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.ReadWrite">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.Manage">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.Execute">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.FilePermission.All">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.LifecycleStateChange">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.LockService">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.UnlockService">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.UnregisterService">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.MakeActiveAccessManager">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.LockAppDomain">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.UnlockAppDomain">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.MakeDefaultSelectedApplication">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.RemoveDefaultSelectedApplication">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.LifecycleStateChange.TerminateCard">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.PIN">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.#ctor(System.String,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Update(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Block">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Invalidate">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Update(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Verify(System.Byte[],System.Int32,System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.PIN.Verify(System.String)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.PIN.IsBlocked">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.PIN.TriesRemaining">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.PIN.IsVerified">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.SessionEndedEventArgs">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.SessionEndedEventArgs.#ctor(SmartCard.SessionEndReasons)">
+            <summary></summary>
+        </member>
+        <member name="P:SmartCard.SessionEndedEventArgs.Reason">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.SessionEndReasons">
+            <summary></summary>
+        </member>
+        <member name="F:SmartCard.SessionEndReasons.SystemShutdown">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.StatusWord">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.StatusWord.#ctor">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.StatusWord.Set(System.Int16)">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.SystemEvents">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.SystemEvents.#ctor">
+            <summary></summary>
+        </member>
+        <member name="E:SmartCard.SystemEvents.SessionEnded">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Services.TransactionException">
+            <summary></summary>
+        </member>
+        <member name="M:SmartCard.Services.TransactionException.#ctor">
+            <summary></summary>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute">
+            <summary>
+            The APDUAttribute attribute is attached to methods that are exposed to the external world
+            via the ISO7816 protocol.
+            </summary>
+            
+            <remarks>
+            <p>
+            You can apply this attribute to methods.  </p>
+            
+            <p>Only the first string argument is mandatory.  Mask, StatusWord, and OnInvalidLe are all optional.</p>
+            
+            <p>Methods that have APDU attributes can still be called using .NET remoting.</p>
+            </remarks>
+            
+            <example> 
+            usage example: ISO7816 WriteBinary command prototype.    
+            <code>
+            [APDU("00D00000", Mask="0000FFFF")]
+            public void WriteBinary(int fileOffset, byte[] dataToWrite)
+            {
+                ...    
+                ...
+            }</code>
+            
+            When ISO7816 APDU header 00-D0-XX-YY will be presented on the IO line, if application is currently
+            activated, the method WriteBinary() will be invoked, and method parameters will be filled with the APDU payload.    
+            Upon successful completion of the method, the status word 0x9000 will be returned.
+            
+            <code>
+            [APDU("00E0", StatusWord="6214", OnInvalidLe=APDUInvalidLeAcknowledgeMode.Reject)]
+            public int WriteBinary2(int fileOffset, byte[] dataToWrite)
+            {
+                ...    
+                ...
+            }   </code> 
+            
+            When ISO7816 APDU header 00-E0-00-00 will be presented on the IO line, if application is currently
+            activated, the method WriteBinary2() will be invoked, and method parameters will be filled with the APDU payload.
+            Because this method both takes parameters and returns a value, the card will send an intermediate return value of
+            0x6104.  The terminal must then send a GetResponse command (as it does with any 0x61XX command).
+            If the protocol GetResponse command does not request 4 bytes (int = Int32 = 4 bytes), the card will not provide any
+            data and reject the command with the status word 0x6700 (OnInvalidLe=APDUInvalidLeAcknowledgeMode.Reject).
+            When the entire communications process between card and terminal is completed successfully, the status word of
+            0x6214 will be sent.
+            
+            <code>
+            [APDU("00E21133", OnInvalidLe=APDUInvalidLeAcknowledgeMode.IndicateLa)]
+            public byte[] WriteBinary3(int fileOffset, byte[] dataToWrite)
+            {
+                ...    
+                ...
+            }</code>
+            
+            When ISO7816 APDU header 00-E2-11-33 will be presented on the IO line, if application is currently
+            activated, the method WriteBinary3() will be invoked, and method parameters will be filled with the APDU payload.    
+            The terminal should send a GetResponse command (0x61xx effect).
+            If the protocol GetResponse command does not request the correct number of bytes (xx), the card will not provide any data and indicate the expected length
+            using status word 0x6Cxx (OnInvalidLe=APDUInvalidLeAcknowledgeMode.IndicateLa).    
+             
+            
+            </example>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute.Mask">
+            <summary>
+            ISO7816 APDU Header Mask.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute.StatusWord">
+            <summary>
+            ISO7816 Status Word to return on nominal execution.
+            </summary>
+            
+            <remarks>
+            StatusWord is set to 0x9000 by default.
+            </remarks>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute.OnInvalidLe">
+            <summary>
+            Protocol behavior that should be applied when an invalid Le is presented.
+            </summary>
+            
+            <remarks>
+            OnInvalidLe is set to APDUInvalidLeAcknowledgeMode.IndicateLa by default.
+            </remarks>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute.AssociatedChannelPortNumber">
+            <summary>
+            Port number of the communication channel to use.
+            </summary>
+            
+            <remarks>
+            AssociatedChannelPortNumber is set to -1 by default, meaning use the first registered channel.
+            Valid range: 0 &lt;= AssociatedChannelPortNumber &lt;= 0xFFFF
+            </remarks>
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.APDUAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the APDUAttribute class with the 
+            specified ISO7816 APDU header (CLA || INS || P1 || P2).
+            </summary>
+            <param name="CLA_INS_P1_P2">4 bytes APDU header</param>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.APDUExceptionAttribute">
+            <summary>
+            Indicates how to marshal an exception between managed code and ISO7816 protocol.  Allows you to assign a 2-byte
+            ISO7816 status word to an exception that might be thrown by a method.
+            </summary>
+            
+            <remarks>
+            You can apply this attribute to methods. 
+            This attribute is valid only if used in conjunction with APDUAttribute.  
+            Matching of exceptions is performed by exact type (mapping ArgumentException will not "catch" an ArgumentNullException).
+            </remarks>
+            
+            <example> 
+            usage example: ISO7816 WriteBinary command prototype.    
+            <code>
+            [APDU("00D00000")]
+            [APDUException(typeof(System.IO.IOException), "6981")]
+            public void WriteBinary(int fileOffset, byte[] dataToWrite)
+            {
+                ...   
+                ...
+            }
+            
+            Upon WriteBinary() execution, if an IOException is thrown, the ISO7816 APDU protocol status word
+            will be set to 0x6981. If method complete normally (ie no exception thrown) the ISO7816 APDU protocol status word
+            will be set to 0x9000. 
+            
+            [APDU("00E00000", StatusWord="9002")]   
+            [APDUException(typeof(IOException), "6981")]
+            [APDUException(typeof(FileNotFoundException), "6899")]
+            [APDUException(null, "6888")]
+            public void WriteBinary2(int fileOffset, byte[] dataToWrite)
+            {
+                ...
+                ...
+            }
+            
+            Upon WriteBinary2() execution, if an IOException is thrown, the ISO7816 APDU protocol status word
+            will be set to 0x6981. If a FileNotFoundException is thrown, the ISO7816 APDU protocol status word
+            will be set to 0x6899. If any other exception is thrown, the ISO7816 APDU protocol status word
+            will be set to 0x6888. If method complete normally (ie no exception thrown) the ISO7816 APDU protocol status word
+            will be set to 0x9002.          
+            
+            
+            [APDU("00E00000", Mask = "0000FFFF", StatusWord="9002")]
+            [APDUException(null, "6900")]
+            [APDUException(null, "6901", Reason="fatal error")]        
+            [APDUException(null, "6902", Reason="warning")]
+            [APDUException(typeof(System.ApplicationException), "6903", Reason = "application error")]
+            [APDUException(typeof(System.ArgumentException), "6904", Reason = "out-of-bound param")]
+            [APDUException(typeof(System.ArgumentException), "6905", Reason = "illegal param")]
+            [APDUException(typeof(System.NullReferenceException), "6906")]
+            public void ReadBinary([APDUParam(APDUHeader.P1P2)]ushort offset, [APDUParam(APDUHeader.P3)] byte len)
+            {
+                switch (offset) 
+                {
+                    case 0:
+                        throw new Exception();  // will return SW = 0x6900                
+                    
+                    case 1:
+                        throw new ApplicationException("fatal error");  // will return SW = 0x6901
+               
+                    case 2:
+                        throw new FormatException("warning");  // will return SW = 0x6902
+               
+                    case 3:
+                        throw new ApplicationException("application" + " " + "error");  // will return SW = 0x6903
+                    
+                    case 4:
+                        throw new ArgumentException("out-of-bound param");  // will return SW = 0x6904
+               
+                    case 5:
+                        throw new ArgumentException("illegal param"); // will return SW = 0x6905                   
+                    
+                    case 6:
+                        throw new NullReferenceException(); // will return SW = 0x6906               
+                    
+                    case 7:
+                        throw new System.Security.Cryptography.CryptographicException("other error");  // will return SW = 0x6907
+                }
+                
+                // will return SW = 0x9002
+            }
+            
+            The above method demonstrate how to use the exception message for specific status word associations.
+            Note the use of the null parameter as an exception type to define a `Catch All` mode, that can be triggered
+             on any uncaught exceptions or only on uncaught exceptions with a particular exception message.
+            
+            </code>
+            </example>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUExceptionAttribute.Reason">
+            <summary>
+            Message associated to the exception.
+            </summary>   
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.APDUExceptionAttribute.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the APDUMarshalExceptionAttribute class with the 
+            specified exception Type and associated ISO7816 protocol status word.
+            </summary>
+            
+            <remarks>
+            <p>
+            The exception type must be defined in mscorlib, System.Xml or netCard assemblies, 
+            otherwise use the alternate constructor
+            </p>
+            <p>
+            Setting null as an exceptionType sets the fallback of unprocessed exceptions onto this APDUException attribute.
+            </p>
+            </remarks>
+            
+            <param name="exceptionType">exception to marshal (use typeof(exceptionType))</param>
+            <param name="statusWord">ISO7816 equivalent status word as an hexstring</param>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader">
+            <summary>
+            Identifies ISO7816 APDU Header parameters.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.CLA">
+            <summary>
+            ISO7816 APDU protocol Class byte.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.INS">
+            <summary>
+            ISO7816 APDU protocol Instruction byte.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.P1">
+            <summary>
+            ISO7816 APDU protocol Parameter1 byte.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.P2">
+            <summary>
+            ISO7816 APDU protocol Parameter2 byte.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.P3">
+            <summary>
+            ISO7816 APDU protocol Parameter3 byte (incoming length:Lc or outgoing length:Le).
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader.P1P2">
+            <summary>
+            ISO7816 APDU protocol Parameter1 concatenated to Parameter2 bytes.
+            </summary>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.APDUInvalidLeAcknowledgeMode">
+            <summary>
+            Specifies how the operating system communication stack should react when
+            receiving an outgoing transfer request with an invalid length.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUInvalidLeAcknowledgeMode.Reject">
+            <summary>
+            Returns SW=0x6700 on invalid requested length.
+            Le is not accepted by the card which does not support the service of providing
+            data if the length is wrong.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Runtime.InteropServices.ISO7816.APDUInvalidLeAcknowledgeMode.IndicateLa">
+            <summary>
+            Returns SW=0x6C[La] on invalid requested length.
+            Le is not accepted by the card and the card indicates the available length [La].        
+            </summary>
+        </member>
+        <member name="T:SmartCard.Runtime.InteropServices.ISO7816.APDUParamAttribute">
+            <summary>
+            Indicates how to unmarshal the data between ISO7816 protocol and managed code.  You can use this attribute to extract
+            elements of the ISO7816 header into parameters that are passed to the method.
+            </summary>
+            
+            <remarks>
+            You can apply this attribute to parameters. 
+            This attribute is valid only if used in conjunction with an APDUAttribute.
+            </remarks>
+            
+            <example> 
+            usage example: ISO7816 ReadBinary command prototype.
+            APDU received: CLA = 0x00, INS = 0xB0, P1 = XX, P2 = YY, P3 = ZZ
+            <code>
+            [APDU("00B00000", "0000FFFF")]
+            public void ReadBinary([APDUParam(APDUHeader.P1P2)]int fileOffset, [APDUParam(APDUHeader.P3)] int readLength)
+            {
+                ...
+                The offset encoded in (P1 || P2) bytes of ISO7816 APDU header will be unmarshaled in the "offset" parameter of
+                the method. 
+                The expected length P3 will be unmarshaled in "readLength" parameter.
+                ...
+            }
+            </code>
+            </example>
+        </member>
+        <member name="M:SmartCard.Runtime.InteropServices.ISO7816.APDUParamAttribute.#ctor(SmartCard.Runtime.InteropServices.ISO7816.APDUHeader)">
+            <summary>
+            Initializes a new instance of the APDUParamAttribute class with the specified <see cref="T:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader"/> enumeration member.
+            </summary>
+            <param name="headerInfo">An <see cref="T:SmartCard.Runtime.InteropServices.ISO7816.APDUHeader"/> enumeration member</param>
+        </member>
+        <member name="T:SmartCard.Services.GCControlAttribute">
+            <summary>
+            Allow control of the Garbage Collection triggering moment.
+            </summary>
+        </member>
+        <member name="M:SmartCard.Services.GCControlAttribute.#ctor(SmartCard.Services.GCControlMode)">
+            <summary>
+            Initializes a new instance of the GCAttribute class.
+            </summary>
+            <param name="controlMode">specifies when the Garbage Collection should be activated</param>
+        </member>
+        <member name="T:SmartCard.Services.GCControlMode">
+            <summary>
+            Specify the Garbage Collection triggering mode
+            </summary>
+        </member>
+        <member name="F:SmartCard.Services.GCControlMode.Force">
+            <summary>
+            Gargabage Collection will occur during the method invocation.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Services.GCControlMode.Skip">
+            <summary>
+            Gargabage Collection will not occur during method invocation.
+            </summary>
+        </member>
+        <member name="F:SmartCard.Services.GCControlMode.OnLowMemory">
+            <summary>
+            Gargabage Collection will occur when system is running out of memory
+            </summary>
+        </member>
+        <member name="T:SmartCard.Services.OutOfTransactionAttribute">
+            <summary>
+            The OutOfTransaction attribute annotates fields that must not participate whithin possible on-going transactions.
+            </summary>
+            
+            <remarks>
+            This attribute can only be applied to primitive Types (bool, char, byte, sbyte, short, ushort, int, uint, long, ulong).
+            </remarks>
+            
+            <example>
+            The following example demonstrates how fields marked with the [OutOfTransaction] attribute are excluded from transactions.    
+            
+            <code>
+            using System;
+            using System.Diagnostics;
+            
+            using SmartCard;
+            using SmartCard.Services;    
+            
+            public class MySecureCounter {
+            
+                [OutOfTransaction]
+                byte counter;
+            
+                public void Increase()
+                {
+                    counter++;
+                }
+                
+                public byte Value
+                {
+                    get {
+                        return counter;
+                    }
+                }    
+            }
+            
+            public class Test {
+            
+                MySecureCounter secCount = new MySecureCounter()
+            
+                [Transaction]
+                public void TestWithAbortedTransaction()
+                {
+                    secCount.Increase();
+                    throw new Exception(); // abort
+                }
+                
+                public void TestWithoutTransaction()
+                {
+                    secCount.Increase();
+                    throw new Exception(); // abort
+                }    
+            
+                static void Main() {    
+                
+                    Test test = new Test();
+                    
+                    Debug.WriteLine("initial value = " test.secCount.Value); // expect test.secCount.Value = 0
+                    
+                    try {    
+                        test.TestWithoutTransaction();
+                    } catch {
+                    }
+                        
+                    Debug.WriteLine("second value = " test.secCount.Value); // expect test.secCount.Value = 1
+                    
+                    try {
+                        test.TestWithAbortedTransaction();
+                    } catch {    
+                    }
+                        
+                    Debug.WriteLine("third value = " test.secCount.Value); // expect test.secCount.Value = 1    
+                    
+                }
+            
+            }
+            
+            </code>    
+            </example>
+        </member>
+        <member name="M:SmartCard.Services.OutOfTransactionAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the OutOfTransactionAttribute class.
+            </summary>
+        </member>
+        <member name="T:SmartCard.Services.TransactionAttribute">
+            <summary>
+            The Transaction attribute is attached to methods which are contained within their own transactions.  
+            A new, nested, transaction is started when a TrnasactionAttribute annotated method is
+            entered, and commited when the method returns.  
+            If a method terminates with an uncaught exception the transaction is aborted.
+            </summary>
+        </member>
+        <member name="M:SmartCard.Services.TransactionAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the TransactionAttribute class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1 @@
+Sukurti kortelės ir kliento programas, kurios imituotų keletą mobilaus telefono SIM kortelės operacijų (pvz. operatorius ir teikiamos paslaugos, kontaktų peržiūra ir keitimas, SMS peržiūra ir trynimas);

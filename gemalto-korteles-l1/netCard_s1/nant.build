@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<project name="netCardProject" default="build">   
+ 
+    <target name="build" description="load and execute assembly">
+        <load file="bin\debug\netCard Server.exe" todir="C:\Pub" execute="true"
+                                                 reload="true" serviceName="SMS.uri"/>        
+    </target>    
+    
+</project>

@@ -1,0 +1,87 @@
+Gemalto .NET CARD DEVELOPER LICENSE AGREEMENT
+
+By opening the software CD-ROMs, downloading from the Gemalto Website, installing, copying or otherwise using the contents of the BETA VERSION OF THE Kit (as defined below), including the Kit Programs (defined below), you are accepting a license from Gemalto Inc. as described below, and you are agreeing to be bound by this License Agreement.  
+
+Use of this software and Kit Programs is governed by, AND Your use constitutes your knowledge and acceptance of, the Terms contained herein. 
+
+If you do not agree to the terms of this License, you are not authorized to install or use the contents of the Kit, and you MUSt NOT PROCEED WITH INSTALLATION AND YOU Must return the Kit to Gemalto.  IF YOU DO NOT DO SO, FURTHER USE OR DISTRIBUTION WILL BE ACTIONABLE AND GEMALTO WILL ENFORCE ITS right to pursue all of its remedies BOTH in equity and at law.
+
+1.0 DEFINITIONS
+
+1.1 "Kit" means the Gemalto .NET Smartcard Development Kit. Contents of the Kit are listed in Appendix A. 
+
+1.2 "Materials" means Gemalto .NET Smartcard Development Kit. Contents of the Kit are listed in Appendix A.
+
+1.3 "Kit Programs" means those listed in Appendix A. 
+
+1.4 "Software" means Kit Programs and third party software. 
+
+1.5 "Third Party Software" means NAnt, version 0.85 and log4net, version 1.2. 
+
+1.6 "Application" means a Cardlet or computer program designed to execute on a smart card or on a computer connected to a smart card reader.
+
+2.0 LICENSE GRANT 
+
+2.1 License.  Gemalto hereby grants you a revocable, limited, internal,  non-exclusive, non-transferable license (without the right to sub-license or assign) for Evaluation of the Software, and for no other purpose. Where title to certain Third Party Software is retained by Gemalto's licensors, Gemalto warrants that it has the authority to distribute such software to you.  You may need to enter into separate license agreements with such Third Party owners, for example, the clickware license agreements included with this distribution, and use of those Third Party Software are governed separately under those such agreements.  “Evaluation” means testing and conducting technical evaluations of the Products in a closed, secure test environment which prohibits and prevents access to the Products either by remote access or by any person not authorized or qualified to complete a technical evaluation of the Products and assigned by Evaluator to do so.  Gemalto grants Evaluator no other license of any sort, actual or implied.
+
+
+2.2 License Term. This license grant is effective from the date the Products are shipped to the Evaluator, or the date that the Software is downloaded from Gemalto by Evaluator; whichever is earlier.  This license shall remain in force until terminated by Gemalto by written notice to Evaluator of the end of the beta test period, or until the commercial release of the Software; whichever is earlier. 
+
+2.3 Limitations on Use. In addition to all other limitations in this section, you expressly agree that you will not: (1) make any copies of the Kit Programs or any component of the Kit (Gemalto will provide you with replacement copies of the Kit Programs, without charge if  possible); (2) modify the Kit Programs in any way; (3) create derivative versions of the Kit Programs; (4) reverse assemble or disassemble, reverse compile, or reverse engineer the Kit Programs, or any other component of the Kit; or (5) distribute, use, or otherwise make the Kit Programs or any component of the Kit available, directly or indirectly, for any use, by any third person, or (6) remove or alter any copyright, trademark or other proprietary notice from the Products All of these activities are expressly prohibited. 
+
+2.4 Further distribution or use of any or all of the Kit Programs including internal distribution other than for Evaluation or commercial deployment is expressly prohibited and, if desired by Evaluator, is subject to a different license agreement available from Gemalto.
+
+2.5 Ownership of the Kit Programs, Intellectual Property, and Proprietary Information. Gemalto represents, and you acknowledge such representation, that the Kit, including without limitation the Kit Programs, contains valuable information owned by Gemalto, including but not limited to the development status of the Kit Programs, the functionality of the Kit Programs, the appearance, content and flow of the Kit Programs' screens, the method and pattern of user interaction with the Kit Programs, and the content of the Kit Programs' documentation. You hereby agree that no title to (1) the Kit or the Kit Programs, (2) the intellectual property rights in the Kit or the Kit Programs or its components or (3) copies of the Kit or the Kit Programs is transferred to you by this Agreement. Gemalto retains all title and ownership rights in the Kit and the Kit Programs, and all of their updates, documentation, bug fixes, modifications, subsequent versions, diagnostic software, support materials, manuals and other documentation (the "Materials"), all of which also contain Gemalto proprietary Information. The Kit, including without limitation the Kit Programs, the Materials and any Gemalto proprietary information contained therein and any intellectual property rights pertaining thereto (including all patents, copyrights, trademarks and service marks), remains the exclusive property of Gemalto and no title is granted to you in conjunction with this Agreement. 
+
+3. Protection of Confidential Information
+
+The Products are delivered on a confidential basis and you are responsible for employing reasonable measures to prevent the unauthorized use thereof, which measures shall not be less than reasonable. 
+
+
+4.0 DISCLAIMERS AND LIMITED REMEDY 
+
+4.1 General Disclaimer. The Software is provided "AS IS" and that Gemalto makes no warranty as to the Software.  GEMALTO HEREBY DISCLAIMS ALL EXPRESS AND IMPLIED REPRESENTATIONS AND WARRANTIES WITH RESPECT TO THE KIT, THE MATERIALS AND THE SOFTWARE, INCLUDING WITHOUT LIMITATION, ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. 
+
+4.2 Limitation of Liability. IN NO EVENT SHALL GEMALTO BE LIABLE TO YOU OR ANY OTHER INDIVIDUAL OR ENTITY CONNECTED WITH YOU FOR ANY CLAIM, LOSS OR DAMAGE OF ANY KIND, ARISING OUT OF THE PERFORMANCE OF THIS AGREEMENT OR ARISING OUT OF OR IN CONNECTION WITH (1) THE DEFICIENCY OR INADEQUACY OF THE KIT OR THE SOFTWARE FOR ANY PURPOSE WHETHER OR NOT KNOWN OR DISCLOSED TO YOU; (2) THE USE OR PERFORMANCE OF THE KIT OR THE SOFTWARE OR OF ANY FILES, DATA OR COMPUTER SYSTEMS RELATING THERETO OR USED IN CONNECTION THEREWITH; (3) ANY INTERRUPTION OR LOSS OF SERVICE OR USE OF THE KIT OR THE SOFTWARE; (4) ANY ERROR; OR (5) ANY LOSS OF PROFITS, SALES, BUSINESS, DATA OR OTHER DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, OR LOSS OR DAMAGE OF ANY KIND OR NATURE RESULTING FROM THE FOREGOING, AND NOTWITHSTANDING ANY FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY. 
+
+5.0 NOTICE
+
+You hereby accept to receive notice of termination or any other legal notice (including service of process) either by US mail or electronically through your provided e-mail account on record with Gemalto, and are effective upon transmission.
+
+6.0 MISCELLANEOUS 
+
+6.1 Export. You acknowledge that the Software may be governed by the U.S. laws and regulations on exports and may be subject to import or export regulations in other countries. You agree to comply with all such laws and regulations. 
+
+6.2 Disposition of Software. You may not transfer, sell, assign, pledge or otherwise dispose of any Software provided hereunder without  Gemalto's prior written consent. You shall not allow any liens or other legal claims to be made against Software as a result of your use. 
+
+6.3 No other rights. Except as expressly provided herein, no license, rights, or title in any intellectual property are provided hereunder, either expressly or by implication, estoppel or otherwise. 
+
+6.4 Assignment. This Agreement may not be assigned by you without the express written consent of Gemalto. Any attempted assignment shall be void. 
+
+6.5 Termination. If you fail to comply with the terms of this Agreement, Gemalto may terminate this Agreement and the licenses granted herein.  If this Agreement or the license granted herein terminates for any reason, you must either destroy all copies of the Software and uninstall the Software from any computers on which you have installed the Software, or return all copies to Gemalto.
+
+6.6 Applicable Law. This Agreement will be subject of the exclusive jurisdiction of the courts of and governed by and construed in accordance with the laws of the State of Texas, without regard to the conflict of laws provisions of Texas or any other jurisdiction. You and Gemalto waive, to the fullest extent of the law, a right to a trial by jury.  You further agree that any suit or demand related to this Agreement shall be brought in Travis County, Texas.
+
+6.8 Headings. The section headings of this agreement are for organizational purposes only and shall not be used in interpreting this Agreement. However, reference to a section includes reference to all subsections of that section. 
+
+6.9 Unenforceable Provisions. In the event that any provision of this Agreement is found by a court of competent jurisdiction to be unenforceable, the remaining portions of this Agreement shall remain in full force and effect. 
+
+6.10 Waiver. The failure of either party to enforce any section of this Agreement shall not be construed as a waiver of such provisions or of the right of such party to enforce that, or any other, provision of this Agreement. 
+
+6.11 Complete Agreement. This Agreement, with Appendix A and any applicable Testing and Evaluation Agreement, represents the sole and exclusive Agreement between the parties; it supersedes and cancels any former written or oral agreement or arrangement between the parties in respect to the subject matter hereof. Neither party will be bound by any condition, definition, guarantee or representation other than those set forth or mentioned in this Agreement. 
+
+APPENDIX A - CONTENTS OF .NET Card Developer Kit
+
+·	CardExplorer Standalone application
+·	CardExplorer AddIn for Visual Studio 2005
+·	CardExplorer AddIn for Visual Studio 2008
+·	CardExplorer AddIn for Visual Studio 2010
+·	Converter creating card resident binary
+·	Remoting Client support
+·	C# Templates 
+·	Application Samples
+·	Documentation
+·	Update Manager Application
+·	NAnt custom tasks for SDK
+·	Gemalto .NET Smartcard(s)
+·	on-card software components - smart card OS, CLR, and Libraries
