@@ -26,6 +26,11 @@ namespace MyCompany.MyOnCardApp
                 }
             }
 
+            if (!IsValidNumber(number) || !IsValidName(name) || !IsValidName(newName))
+            {
+                return false;
+            }
+
             if (!RemoveContact(name))
             {
                 return false;
@@ -36,7 +41,12 @@ namespace MyCompany.MyOnCardApp
 
         public bool CreateContact(string name, string number)
         {
-            if (!IsUniqueName(name))
+            if (!IsUniqueName(name) || !IsValidName(name))
+            {
+                return false;
+            }
+
+            if (!IsValidNumber(number))
             {
                 return false;
             }
@@ -45,6 +55,7 @@ namespace MyCompany.MyOnCardApp
 
             return Write(line);
         }
+
 
         public string[] ReadSavedContacts(int from)
         {
@@ -166,6 +177,39 @@ namespace MyCompany.MyOnCardApp
             }
 
             return PubStorage.AppendLineToFileEnd(ContactsFileName, Encoding.ASCII.GetBytes(content));
+        }
+
+        private static bool IsValidName(string name)
+        {
+            if (name == null)
+            {
+                return false;
+            }
+
+            return name.Length < 60;
+        }
+
+        private static bool IsValidNumber(string number)
+        {
+            if (number == null)
+            {
+                return false;
+            }
+
+            if (number.Length > 20)
+            {
+                return false;
+            }
+
+            foreach (char c in number)
+            {
+                if (c < '0' || c > '9')
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private static void ForEachContact(ProcessContact processDelegate)

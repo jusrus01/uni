@@ -16,6 +16,7 @@ namespace MyCompany.MyClientApp
                 return false;
             }
 
+
             if (number == null)
             {
                 number = GetOldNumberByName(name);
@@ -23,6 +24,11 @@ namespace MyCompany.MyClientApp
                 {
                     return false;
                 }
+            }
+
+            if (!IsValidNumber(number))
+            {
+                return false;
             }
 
             if (!RemoveContact(name))
@@ -40,10 +46,16 @@ namespace MyCompany.MyClientApp
                 return false;
             }
 
+            if (!IsValidNumber(number))
+            {
+                return false;
+            }
+
             string line = name + Separator + number;
 
             return Write(line);
         }
+
 
         public string[] ReadSavedContacts(int from)
         {
@@ -165,6 +177,24 @@ namespace MyCompany.MyClientApp
             }
 
             return PubStorage2.AppendLineToFileEnd(ContactsFileName, Encoding.ASCII.GetBytes(content));
+        }
+
+        private static bool IsValidNumber(string number)
+        {
+            if (number == null)
+            {
+                return false;
+            }
+
+            foreach (char c in number)
+            {
+                if (c < '0' || c > '9')
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private static void ForEachContact(ProcessContact processDelegate)

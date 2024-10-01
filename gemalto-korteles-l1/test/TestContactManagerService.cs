@@ -25,7 +25,7 @@ namespace test
             Assert.IsTrue(contractService.RemoveContact("20"));
             Assert.IsTrue(contractService.CreateContact("20", "20"));
 
-            Assert.IsTrue(contractService.UpdateContact("20", "stop", "stop"));
+            Assert.IsTrue(contractService.UpdateContact("20", "stop", "123"));
 
             List<string> allLinesRead = new List<string>();
             int from = 0;
@@ -56,7 +56,7 @@ namespace test
                 Assert.IsTrue(once != null);
             }
 
-            Assert.IsTrue(allLinesRead.SingleOrDefault(j => j.Contains("stop")) != null);
+            Assert.IsTrue(allLinesRead.SingleOrDefault(j => j.Contains("stop") && j.Contains("123")) != null);
         }
 
         [TestMethod]
