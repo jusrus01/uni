@@ -14,19 +14,23 @@ namespace ConsoleApplication
         }
     }
 
-    //  bent 2 skirtingų pirštų antspauda!!!!!
-
-    // broke assumption :((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
-    // supposed to be - single identity linked to this "user"?
-
     public class Lab
     {
-        private const int RequiredTemplateCount = 2;
+        // Could be not supported on that device.
+        // Can be checked by "Demo" app before defense.
+        private WINBIO_BIOMETRIC_SUBTYPE[] _types = new WINBIO_BIOMETRIC_SUBTYPE[]
+        {
+            WINBIO_BIOMETRIC_SUBTYPE.WINBIO_ANSI_381_POS_LH_THUMB,
+            WINBIO_BIOMETRIC_SUBTYPE.WINBIO_ANSI_381_POS_RH_THUMB
+        };
 
         private readonly Dictionary<Guid, Action> _behaviors = new Dictionary<Guid, Action>();
-        
-        private WINBIO_BIOMETRIC_SUBTYPE _currentSubtype = WINBIO_BIOMETRIC_SUBTYPE.WINBIO_ANSI_381_POS_LH_INDEX_FINGER;
-        private WINBIO_IDENTITY _currentIdentity = new WINBIO_IDENTITY();
+
+        private WINBIO_IDENTITY _currentIdentity = new WINBIO_IDENTITY
+        {
+            Type = WINBIO_IDENTITY_TYPE.WINBIO_ID_TYPE_GUID // if this does not work with/without then - introduce own GUID and store in memory.
+        };
+
         private IntPtr _currentSessionHandle = IntPtr.Zero;
         private uint _currentSessionUnitId = 0;
 
@@ -36,21 +40,24 @@ namespace ConsoleApplication
             {
                 OnStart();
 
-                for (int i = 0; i < RequiredTemplateCount; i++)
+                for (int i = 0; i < _types.Length; i++)
                 {
-                    // could be that I need to switch types on demand...
-                    var templateId = EnrollFingerprintTemplate(i);
+                    var templateId = EnrollFingerprintTemplate(_types[i]);
                     AttachBehavior(templateId, i);
                 }
 
-                Log($"{RequiredTemplateCount} templates were read. Going into only identification mode. Please scan finger to invoke function");
+                Log($"{_types.Length} templates were read. Going into only identification mode. Please scan finger to invoke function");
 
-                Guid readTemplateId;
-                do
+                for (int i = 0; i < _types.Length; i++)
                 {
-                    readTemplateId = Identify();
+                    Guid readTemplateId;
+
+                    do
+                    {
+                        readTemplateId = Identify(_types[i]);
+                    }
+                    while (!ExecuteAttachedBehavior(readTemplateId));
                 }
-                while (!ExecuteAttachedBehavior(readTemplateId));
             }
             catch (ManagedException e)
             {
@@ -81,7 +88,7 @@ namespace ConsoleApplication
             return true;
         }
 
-        private Guid Identify()
+        private Guid Identify(WINBIO_BIOMETRIC_SUBTYPE type)
         {
             const int retryCount = 10;
             int count = 0;
@@ -96,7 +103,7 @@ namespace ConsoleApplication
                     _currentSessionHandle,
                     ref _currentSessionUnitId,
                     ref _currentIdentity,
-                    ref _currentSubtype,
+                    ref type,
                     ref rejectDetail);
 
                 if (ret == 0)
@@ -108,8 +115,10 @@ namespace ConsoleApplication
                 {
                     Log("Bad capture, reason: " + rejectDetail.ToString());
                 }
-                // this could be bad...
-                //EnsureSuccess(ret, "Something went wrong while identifying");
+                else
+                {
+                    EnsureSuccess(ret, "Something went wrong while identifying");
+                }
 
                 count++;
             }
@@ -137,13 +146,13 @@ namespace ConsoleApplication
             _behaviors.Add(templateId, action);
         }
 
-        private Guid EnrollFingerprintTemplate(int index)
+        private Guid EnrollFingerprintTemplate(WINBIO_BIOMETRIC_SUBTYPE type)
         {
-            Log($"Starting enrollment for {index} person");
+            Log($"Starting enrollment for {type} type");
 
             WinBioHelpers.BringConsoleToFront();
 
-            uint ret = WinBio.Native.WinBioEnrollBegin(_currentSessionHandle, _currentSubtype, _currentSessionUnitId);
+            uint ret = WinBio.Native.WinBioEnrollBegin(_currentSessionHandle, type, _currentSessionUnitId);
             EnsureSuccess(ret, "Failed to begin enrollment process");
 
             WINBIO_REJECT_DETAIL rejectDetail = WINBIO_REJECT_DETAIL.WINBIO_FP_SUCCESS;
@@ -193,12 +202,15 @@ namespace ConsoleApplication
 
         private void OnExit()
         {
-            CleanUp();
+            for (int i = 0; i < _types.Length; i++)
+            {
+                CleanUp(_types[i]);
+            }
+
             CloseSession();
         }
 
-        // this to be adopted if subtype changes...
-        private void CleanUp()
+        private void CleanUp(WINBIO_BIOMETRIC_SUBTYPE type)
         {
             Log("Start clean up");
 
@@ -212,7 +224,6 @@ namespace ConsoleApplication
                 return;
             }
 
-
             WINBIO_UNIT_SCHEMA[] units = new WINBIO_UNIT_SCHEMA[n_units];
             WinBioHelpers.MarshalUnmananagedArray2Struct<WINBIO_UNIT_SCHEMA>(units_ptr, n_units, out units);
 
@@ -223,12 +234,12 @@ namespace ConsoleApplication
                 uint foundUnitId = unit.UnitId;
                 WINBIO_REJECT_DETAIL rejectDetail = WINBIO_REJECT_DETAIL.WINBIO_FP_MERGE_FAILURE;
 
-                // Step 2: Try to identify each enrolled identity for the unit
+                // Try to identify each enrolled identity for the unit
                 ret = WinBio.Native.WinBioIdentify(
                     _currentSessionHandle,
                     ref foundUnitId,
                     ref identity,
-                    ref _currentSubtype,
+                    ref type,
                     ref rejectDetail);
 
                 if (!IsSuccess(ret))
@@ -253,7 +264,7 @@ namespace ConsoleApplication
                 byte[] subfactors = new byte[n_subfactors];
                 Marshal.Copy(subfactors_ptr, subfactors, 0, n_subfactors);
 
-                // Step 4: Delete each template for the identity
+                // Delete each template for the identity
                 foreach (byte subfactor in subfactors)
                 {
                     ret = WinBio.Native.WinBioDeleteTemplate(
@@ -285,12 +296,10 @@ namespace ConsoleApplication
         private void OpenSession()
         {
             // https://github.com/tpn/winsdk-10/blob/9b69fd26ac0c7d0b83d378dba01080e93349c2ed/Include/10.0.14393.0/shared/winbio_types.h#L1027
-            // //
             // Well-known database IDs used by WinBioOpenSession
-            //
-            //#define WINBIO_DB_DEFAULT           ((GUID *)1)
-            //#define WINBIO_DB_BOOTSTRAP         ((GUID *)2)
-            //#define WINBIO_DB_ONCHIP            ((GUID *)3)
+            // #define WINBIO_DB_DEFAULT           ((GUID *)1)
+            // #define WINBIO_DB_BOOTSTRAP         ((GUID *)2)
+            // #define WINBIO_DB_ONCHIP            ((GUID *)3)
             const int defaultDatabaseId = 1; // NOTE: when WINBIO_POOL_TYPE is "private" then cannot use.
 
             Log("Trying to open session");
@@ -336,7 +345,7 @@ namespace ConsoleApplication
             {
                 Log("Trying to find sensor to use. Please tap the sensor.");
 
-                WinBioHelpers.BringConsoleToFront(); // why is this needed?
+                WinBioHelpers.BringConsoleToFront(); // ?
 
                 uint ret = WinBio.Native.WinBioLocateSensor(_currentSessionHandle, ref _currentSessionUnitId);
                 
